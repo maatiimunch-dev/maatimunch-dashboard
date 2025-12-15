@@ -23,7 +23,7 @@ const DashbordProduct = () => {
   const fetchProducts = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get("https://shubhammusicalplacebackend.onrender.com/api/products/fetch");
+      const response = await axios.get("https://maatimunch-backend.onrender.com/api/products/fetch");
       setProducts(response.data.data);
       setIsLoading(false);
     } catch (err) {
@@ -50,7 +50,7 @@ const DashbordProduct = () => {
     }
 
     try {
-      const response = await axios.delete(`https://shubhammusicalplacebackend.onrender.com/api/products/delete/${productId}`);
+      const response = await axios.delete(`https://maatimunch-backend.onrender.com/api/products/delete/${productId}`);
       
       // Remove the product from local state
       setProducts(products.filter(product => product._id !== productId));

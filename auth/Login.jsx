@@ -24,7 +24,7 @@ const AdminLogin = () => {
 
     try {
       // Replace with your actual API endpoint
-      const response = await fetch('https://shubhammusicalplacebackend.onrender.com/api/auth/login', {
+      const response = await fetch('https://maatimunch-backend.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

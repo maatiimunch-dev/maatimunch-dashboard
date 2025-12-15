@@ -40,7 +40,7 @@ const Orders = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const response = await axios.get('https://shubhammusicalplacebackend.onrender.com/api/payments/admin/orders', {
+      const response = await axios.get('https://maatimunch-backend.onrender.com/api/payments/admin/orders', {
         params: { page, limit },
         headers: {
           'Authorization': `Bearer ${token}`,

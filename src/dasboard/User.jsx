@@ -13,7 +13,7 @@ const User = () => {
     setError('');
     
     try {
-      const response = await fetch('https://shubhammusicalplacebackend.onrender.com/api/auth/users', {
+      const response = await fetch('https://maatimunch-backend.onrender.com/api/auth/users', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

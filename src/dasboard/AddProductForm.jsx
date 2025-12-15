@@ -24,7 +24,7 @@ function AddProductForm({ isOpen, closeForm, product }) {
     const fetchCategories = async () => {
       setLoadingCategories(true);
       try {
-        const response = await axios.get("https://shubhammusicalplacebackend.onrender.com/api/categories/");
+        const response = await axios.get("https://maatimunch-backend.onrender.com/api/categories/");
         setCategories(response?.data?.data || []);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -94,12 +94,12 @@ function AddProductForm({ isOpen, closeForm, product }) {
 
     try {
       if (product) {
-        await axios.put(`https://shubhammusicalplacebackend.onrender.com/api/products/edit/${product._id}`, formDataToSend, {
+        await axios.put(`https://maatimunch-backend.onrender.com/api/products/edit/${product._id}`, formDataToSend, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         alert("Product updated successfully");
       } else {
-        await axios.post("https://shubhammusicalplacebackend.onrender.com/api/products/add", formDataToSend, {
+        await axios.post("https://maatimunch-backend.onrender.com/api/products/add", formDataToSend, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         alert("Product added successfully");
