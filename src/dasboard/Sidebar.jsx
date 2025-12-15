@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaTimes, FaHome, FaBox, FaShoppingCart, FaUsers, FaSignOutAlt } from "react-icons/fa";
+import { FaTimes, FaHome, FaBox, FaShoppingCart, FaUsers, FaSignOutAlt, FaBlog } from "react-icons/fa";
 import "./Sidebar.css";
 
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, isMobile }) => {
@@ -102,6 +102,20 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, isMobile }) => {
           >
             <FaUsers className="me-2" />
             {isSidebarOpen && <span>Users</span>}
+          </Link>
+        </Nav.Item>
+
+
+        <Nav.Item>
+          <Link
+            to="/blogs"
+            className={`nav-link d-flex align-items-center px-3 py-2 ${
+              location.pathname === "/users" ? "active" : ""
+            }`}
+            onClick={handleNavigation}
+          >
+            <FaBlog className="me-2" />
+            {isSidebarOpen && <span>Blogs</span>}
           </Link>
         </Nav.Item>
 
